@@ -20,6 +20,8 @@ module.exports = {
             "$2a$10$K4uVVYceseuCsDO/qp0XKuCQRORl2d015heQXkVorVEkl8zh5WzEW", //admin123
           name: "admin 1",
           role: "admin",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}
