@@ -14,8 +14,8 @@ exports.promoBooks = async (req, res) => {
     });
 
     data = data.map((item) => {
-      item.bookPdf = process.env.PATH_FILE_PDF + item.bookPdf;
-      item.bookImg = process.env.PATH_FILE_IMG + item.bookImg;
+      item.bookPdf = process.env.PATH_FILE + item.bookPdf;
+      item.bookImg = process.env.PATH_FILE + item.bookImg;
       return item;
     });
 
@@ -50,8 +50,8 @@ exports.getBooks = async (req, res) => {
     });
 
     data = data.map((item) => {
-      item.bookPdf = process.env.PATH_FILE_PDF + item.bookPdf;
-      item.bookImg = process.env.PATH_FILE_IMG + item.bookImg;
+      item.bookPdf = process.env.PATH_FILE + item.bookPdf;
+      item.bookImg = process.env.PATH_FILE + item.bookImg;
       return item;
     });
 
@@ -87,8 +87,8 @@ exports.getBook = async (req, res) => {
 
     data = {
       ...data,
-      bookPdf: process.env.PATH_FILE_PDF + data.bookPdf,
-      bookImg: process.env.PATH_FILE_IMG + data.bookImg,
+      bookPdf: process.env.PATH_FILE + data.bookPdf,
+      bookImg: process.env.PATH_FILE + data.bookImg,
     };
 
     res.send({
@@ -155,8 +155,8 @@ exports.addBooks = async (req, res) => {
       data: {
         books: {
           ...newBookData.dataValues,
-          bookPdf: process.env.PATH_FILE_PDF + newBookData.bookPdf,
-          bookImg: process.env.PATH_FILE_IMG + newBookData.bookImg,
+          bookPdf: process.env.PATH_FILE + newBookData.bookPdf,
+          bookImg: process.env.PATH_FILE + newBookData.bookImg,
         },
       },
     });

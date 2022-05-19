@@ -75,7 +75,7 @@ const socketIo = (io) => {
         });
 
         data = data.map((item) => {
-          item.profile.avatar = process.env.PATH_FILE_AVA + item.profile.avatar;
+          item.profile.avatar = process.env.PATH_FILE + item.profile.avatar;
           return item;
         });
 

@@ -24,7 +24,7 @@ exports.getProfile = async (req, res) => {
     if (data.avatar) {
       data = {
         ...data,
-        avatar: process.env.PATH_FILE_AVA + data.avatar,
+        avatar: process.env.PATH_FILE + data.avatar,
       };
     }
 
