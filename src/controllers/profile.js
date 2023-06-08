@@ -56,7 +56,7 @@ exports.updateProfile = async (req, res) => {
 
     if (req.file) {
       const result = await cloudinary.uploader.upload(req.file.path, {
-        folder: "WaysBook_profile",
+        folder: process.env.AVA_NAME,
         use_filename: true,
         unique_filename: false,
       });
